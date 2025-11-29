@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductOS — AI Product Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              background: '#030712', // Deep Black
+              surface: '#0f172a',
+              primary: '#3b82f6', // Electric Blue
+              secondary: '#9333ea', // Purple Neon
+              accent: '#ec4899', // Pink
+              success: '#10b981',
+              warning: '#f59e0b',
+              danger: '#ef4444',
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'glass': 'linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
+              'neon-glow': 'conic-gradient(from 180deg at 50% 50%, #3b82f6 0deg, #9333ea 180deg, #3b82f6 360deg)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #030712;
+        color: #f8fafc;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .agent-typing-dot {
+        animation: agentTyping 1.4s infinite ease-in-out both;
+      }
+      .agent-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+      .agent-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+      
+      @keyframes agentTyping {
+        0%, 80%, 100% { transform: scale(0); }
+        40% { transform: scale(1); }
+      }
+
+      .markdown-body h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.5em; margin-top: 1em; color: white; }
+      .markdown-body h2 { font-size: 1.5em; font-weight: 600; margin-bottom: 0.5em; margin-top: 1em; color: #e2e8f0; }
+      .markdown-body h3 { font-size: 1.25em; font-weight: 600; margin-bottom: 0.5em; margin-top: 1em; color: #cbd5e1; }
+      .markdown-body p { margin-bottom: 1em; line-height: 1.6; color: #94a3b8; }
+      .markdown-body ul { list-style-type: disc; margin-left: 1.5em; margin-bottom: 1em; color: #94a3b8; }
+      .markdown-body ol { list-style-type: decimal; margin-left: 1.5em; margin-bottom: 1em; color: #94a3b8; }
+      .markdown-body strong { color: #f8fafc; font-weight: 600; }
+      .markdown-body blockquote { border-left: 4px solid #3b82f6; padding-left: 1em; color: #cbd5e1; font-style: italic; }
+      .markdown-body pre { background: #1e293b; padding: 1em; border-radius: 0.5em; overflow-x: auto; margin-bottom: 1em; border: 1px solid rgba(255,255,255,0.1); }
+      .markdown-body code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #60a5fa; }
+      .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+      .markdown-body th, .markdown-body td { border: 1px solid rgba(255,255,255,0.1); padding: 0.5em; text-align: left; }
+      .markdown-body th { background: rgba(255,255,255,0.05); color: #f8fafc; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
